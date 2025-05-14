@@ -1,0 +1,25 @@
+name: React cicd
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+
+    test:
+
+        name: React app test
+        runs-on: self-hosted
+        steps:
+            - name: check Out
+              uses: actions/checkout@v4
+
+            - name: install node js
+              uses: actions/setup-node@v4
+
+            - name: install dependency
+              run: npm ci
+
+            - name: Build 
+              run: npm run build
