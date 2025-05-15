@@ -17,8 +17,6 @@ jobs:
 
             - name: install node js
               uses: actions/setup-node@v4
-              with:
-                node-version: 20
 
             - name: install dependency
               run: npm ci
