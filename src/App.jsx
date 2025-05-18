@@ -54,7 +54,7 @@ function App() {
 
   useEffect(() => {
     getuser();
-  }, []);
+  }, [submit]);
   return (
     <div>
       <h1>Your name and email</h1>
@@ -73,8 +73,8 @@ function App() {
       <button onClick={submit}>Submit</button>
       <div>
         {users &&
-          users.map((user) => {
-            return <div>Hi</div>;
+          users.map((user, i) => {
+            return <div key={i}><span>{user?.name}</span><span>{user?.email}</span></div>;
           })}
       </div>
     </div>
