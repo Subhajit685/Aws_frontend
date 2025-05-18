@@ -52,9 +52,9 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    getuser();
-  }, []);
+  // useEffect(() => {
+  //   getuser();
+  // }, []);
   return (
     <div>
       <h1>Your name and email</h1>
