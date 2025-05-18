@@ -20,6 +20,7 @@ function App() {
       const data = await res.json();
       console.log(data);
       if (data.success) {
+        console.log(data.user)
         setusers(data.user);
       }
     } catch (error) {
@@ -72,10 +73,13 @@ function App() {
       />
       <button onClick={submit}>Submit</button>
       <div>
-        {users &&
-          users.map((user, i) => {
-            return <div key={i}><span>{user?.name}</span><span>{user?.email}</span></div>;
-          })}
+        {Array.isArray(users) &&
+          users.map((user, i) => (
+            <div key={i}>
+              <span>{user?.name}</span>
+              <span>{user?.email}</span>
+            </div>
+          ))}
       </div>
     </div>
   );
