@@ -9,7 +9,7 @@ function App() {
 
   const getuser = async () => {
     try {
-      const res = await fetch(`http://13.60.85.176/api/user`, {
+      const res = await fetch(`http://13.60.208.107:3000/user`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -34,7 +34,7 @@ function App() {
       email,
     };
     try {
-      const res = await fetch(`http://13.60.85.176/api`, {
+      const res = await fetch(`http://13.60.208.107:3000`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -52,9 +52,9 @@ function App() {
     }
   };
 
-  // useEffect(() => {
-  //   getuser();
-  // }, []);
+  useEffect(() => {
+    getuser();
+  }, []);
   return (
     <div>
       <h1>Your name and email</h1>
