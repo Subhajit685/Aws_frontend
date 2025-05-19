@@ -55,7 +55,7 @@ function App() {
 
   useEffect(() => {
     getuser();
-  }, [submit]);
+  }, []);
   return (
     <div>
       <h1>Your name and email</h1>
