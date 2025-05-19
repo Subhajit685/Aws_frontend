@@ -9,7 +9,7 @@ function App() {
 
   const getuser = async () => {
     try {
-      const res = await fetch(`http://51.20.191.139/api/user`, {
+      const res = await fetch(`http://51.20.191.139:80/api/user`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -35,7 +35,7 @@ function App() {
       email,
     };
     try {
-      const res = await fetch(`http://51.20.191.139/api`, {
+      const res = await fetch(`http://51.20.191.139:80/api/add`, {
         method: "POST",
         credentials: "include",
         headers: {
