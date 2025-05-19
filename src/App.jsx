@@ -9,7 +9,7 @@ function App() {
 
   const getuser = async () => {
     try {
-      const res = await fetch(`http://13.60.208.107:3000/user`, {
+      const res = await fetch(`http://51.20.191.139:3000/user`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -35,7 +35,7 @@ function App() {
       email,
     };
     try {
-      const res = await fetch(`http://13.60.208.107:3000`, {
+      const res = await fetch(`http://51.20.191.139:3000`, {
         method: "POST",
         credentials: "include",
         headers: {
