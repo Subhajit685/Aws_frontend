@@ -47,7 +47,7 @@ function App() {
 
       const value = await res.json();
       if (value.success) {
-        setusers(value.user, ...users);
+        getuser()
       }
     } catch (error) {
       console.log(error);
