@@ -10,7 +10,7 @@ function App() {
   const getuser = async () => {
     console.log(import.meta.env.VITE_SERVER_URL);
     try {
-      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/user`, {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/user`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -36,7 +36,7 @@ function App() {
       email,
     };
     try {
-      const res = await fetch(`${import.meta.env.SERVER_URL}/add`, {
+      const res = await fetch(`${import.meta.env.SERVER_URL}/api/add`, {
         method: "POST",
         credentials: "include",
         headers: {
