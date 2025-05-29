@@ -36,7 +36,7 @@ function App() {
       email,
     };
     try {
-      const res = await fetch(`${import.meta.env.SERVER_URL}/api/add`, {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/add`, {
         method: "POST",
         credentials: "include",
         headers: {
