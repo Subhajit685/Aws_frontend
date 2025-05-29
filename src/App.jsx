@@ -8,8 +8,9 @@ function App() {
   const [email, setemail] = useState("");
 
   const getuser = async () => {
+    console.log(import.meta.env.VITE_SERVER_URL);
     try {
-      const res = await fetch(`http://51.20.191.139:80/api/user`, {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/user`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -35,7 +36,7 @@ function App() {
       email,
     };
     try {
-      const res = await fetch(`http://51.20.191.139:80/api/add`, {
+      const res = await fetch(`${import.meta.env.SERVER_URL}/add`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -81,6 +82,7 @@ function App() {
             </div>
           ))}
       </div>
+      <a href="http://localhost:3000/google">google</a>
     </div>
   );
 }
